@@ -1,3 +1,3 @@
 Set-Location $PSScriptRoot
 Set-Location ..
-pixi run -e fft pytest "./src" --benchmark-autosave --benchmark-histogram=histogram/fft
+pixi run -e gpu pytest "./src" --benchmark-autosave --benchmark-histogram=histogram/fft
