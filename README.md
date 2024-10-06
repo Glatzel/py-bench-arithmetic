@@ -1,1 +1,1 @@
-# py-bench-fft
+# glatzel-bench

@@ -1,0 +1,28 @@
+[project]
+name = "glatzel-bench"
+channels = ["conda-forge"]
+platforms = ["win-64"]
+authors = ["Glatzel <893016099@qq.com>"]
+
+[dependencies]
+
+[feature.base.dependencies]
+python = "*"
+numpy = "1.26.*"
+pygal = "*"
+pytest = "*"
+pytest-benchmark = "*"
+[feature.base.pypi-dependencies]
+pygaljs = "*"
+
+[feature.fft.dependencies]
+numba = ">=0.60.0"
+pyfftw = "*"
+pytorch = { version = "*", build = "*cpu*" }
+scipy = "*"
+
+[feature.fft.pypi-dependencies]
+ssqueezepy = "*"
+
+[environments]
+fft = ["base", "fft"]
