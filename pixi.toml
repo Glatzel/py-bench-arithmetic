@@ -1,6 +1,6 @@
 [project]
 name = "glatzel-bench"
-channels = ["conda-forge", "pytorch"]
+channels = ["nvidia", "conda-forge", "pytorch"]
 platforms = ["win-64"]
 authors = ["Glatzel <893016099@qq.com>"]
 
@@ -8,21 +8,30 @@ authors = ["Glatzel <893016099@qq.com>"]
 
 [feature.base.dependencies]
 python = "*"
+numba = ">=0.60.0"
 numpy = "1.26.*"
+pyfftw = "*"
 pygal = "*"
 pytest = "*"
 pytest-benchmark = "*"
-[feature.base.pypi-dependencies]
-pygaljs = "*"
-
-[feature.fft.dependencies]
-numba = ">=0.60.0"
-pyfftw = "*"
 pytorch = { version = "*", build = "*cpu*" }
 scipy = "*"
+numexpr = "*"
 
-[feature.fft.pypi-dependencies]
+[feature.base.pypi-dependencies]
+pygaljs = "*"
 ssqueezepy = "*"
 
+[feature.cpu.dependencies]
+pytorch = { version = "*", build = "*cpu*" }
+
+[feature.gpu.system-requirements]
+cuda = "12.4"
+[feature.gpu.pypi-dependencies]
+pytorch = { version = "*", build = "*cuda*" }
+pytorch-cuda = "12.4"
+
+
 [environments]
-fft = ["base", "fft"]
+cpu = ["base", "cpu"]
+gpu=["base", "gpu"]
