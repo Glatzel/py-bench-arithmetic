@@ -27,7 +27,7 @@ pytorch = { version = "*", build = "*cpu*" }
 
 [feature.gpu.system-requirements]
 cuda = "12.4"
-[feature.gpu.pypi-dependencies]
+[feature.gpu.dependencies]
 pytorch = { version = "*", build = "*cuda*" }
 pytorch-cuda = "12.4"
 
