@@ -14,7 +14,6 @@ pyfftw = "*"
 pygal = "*"
 pytest = "*"
 pytest-benchmark = "*"
-pytorch = { version = "*", build = "*cpu*" }
 scipy = "*"
 numexpr = "*"
 
