@@ -23,5 +23,4 @@ jobs:
         with:
           run-install: false
       - name: bench
-        run: |
-          pixi run -e cpu pytest "./src" --benchmark-max-time=0.00005 --benchmark-min-rounds=1
+        run: pixi run -e cpu pytest "./src" --benchmark-max-time=0.00005 --benchmark-min-rounds=1
