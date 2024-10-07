@@ -12,7 +12,6 @@ def data_figures():
 
 
 @pytest.fixture(params=data_figures(), scope="module")
-@pytest.fixture(params=[*list(range(0, 9))], scope="module")
 def sample_data(request):
     n = 10**request.param
     x = np.linspace(0, 1, n)

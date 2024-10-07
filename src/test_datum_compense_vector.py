@@ -16,7 +16,6 @@ def data_figures():
 
 
 @pytest.fixture(params=data_figures(), scope="module")
-@pytest.fixture(params=[0, 1, 2, 3, 4, 5, 6, 7, 8], scope="module")
 def sample_coords(request):
     # We pass in the complete file contents, because we don't want file IO
     # to skew results.

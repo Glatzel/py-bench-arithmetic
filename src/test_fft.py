@@ -20,7 +20,6 @@ def data_figures():
 
 
 @pytest.fixture(params=data_figures(), scope="module")
-@pytest.fixture(params=range(10, 27, 2), scope="module")
 def data_size(request):
     return request.param
 
