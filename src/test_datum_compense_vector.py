@@ -1,3 +1,5 @@
+import os
+
 import numpy as np
 import pytest
 import torch
@@ -7,7 +9,13 @@ npr = rng.random
 group = "datum compense vector"
 
 
-@pytest.fixture(params=[0, 1, 2, 3, 4, 5, 6, 7, 8], scope="module")
+def data_figures():
+    if os.getenv("CI"):
+        return [0]
+    return range(0, 9)
+
+
+@pytest.fixture(params=data_figures(), scope="module")
 def sample_coords(request):
     # We pass in the complete file contents, because we don't want file IO
     # to skew results.

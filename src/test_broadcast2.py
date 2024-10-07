@@ -1,9 +1,17 @@
+import os
+
 import numpy as np
 import pytest
 import torch
 
 
-@pytest.fixture(params=[*list(range(0, 9))], scope="module")
+def data_figures():
+    if os.getenv("CI"):
+        return [0]
+    return range(0, 9)
+
+
+@pytest.fixture(params=data_figures(), scope="module")
 def sample_data(request):
     n = 10**request.param
     x = np.linspace(0, 1, n)
