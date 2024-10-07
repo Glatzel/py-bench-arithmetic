@@ -1,10 +1,18 @@
+import os
+
 import numpy as np
 import pytest
 
 group = "datum compense loop "
 
 
-@pytest.fixture(params=[0, 1, 2, 3, 4, 5], scope="module")
+def data_figures():
+    if os.getenv("CI"):
+        return [0]
+    return range(0, 6)
+
+
+@pytest.fixture(params=data_figures(), scope="module")
 def sample_coords(request):
     return 10**request.param, 2821940.796, 469704.6693, 400.0
 

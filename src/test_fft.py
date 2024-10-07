@@ -13,6 +13,13 @@ group = "FFT size: "
 rng = np.random.default_rng(1337)
 
 
+def data_figures():
+    if os.getenv("CI"):
+        return [10]
+    return range(10, 27, 2)
+
+
+@pytest.fixture(params=data_figures(), scope="module")
 @pytest.fixture(params=range(10, 27, 2), scope="module")
 def data_size(request):
     return request.param
