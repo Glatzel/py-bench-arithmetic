@@ -5,8 +5,6 @@ platforms = ["win-64"]
 authors = ["Glatzel <893016099@qq.com>"]
 
 [dependencies]
-
-[feature.base.dependencies]
 python = "*"
 numba = ">=0.60.0"
 numpy = "1.26.*"
@@ -17,7 +15,7 @@ pytest-benchmark = "*"
 scipy = "*"
 numexpr = "*"
 
-[feature.base.pypi-dependencies]
+[pypi-dependencies]
 pygaljs = "*"
 ssqueezepy = "*"
 
@@ -32,5 +30,5 @@ pytorch-cuda = "12.4"
 
 
 [environments]
-cpu = ["base", "cpu"]
-gpu=["base", "gpu"]
+default = ["cpu"]
+gpu=["gpu"]
