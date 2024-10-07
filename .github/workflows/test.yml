@@ -22,8 +22,6 @@ jobs:
         uses: prefix-dev/setup-pixi@v0.8.1
         with:
           run-install: false
-      - name: install environment
-        run: pixi install -e cpu
       - name: bench
         run: |
-          pixi run -e cpu pytest "./src" --benchmark-max-time=0.00005 --benchmark-min-rounds=1 --benchmark-histogram=histogram/
+          pixi run -e cpu pytest "./src" --benchmark-max-time=0.00005 --benchmark-min-rounds=1
