@@ -39,7 +39,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/m2w64-gcc-libs-core-5.3.0-7.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/win-64/m2w64-gmp-6.1.0-2.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/win-64/m2w64-libwinpthread-git-5.0.0.4634.697f757-2.tar.bz2
-      - conda: https://conda.anaconda.org/conda-forge/win-64/markupsafe-2.1.5-py310ha8f682b_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/win-64/markupsafe-3.0.0-py310ha8f682b_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/mkl-2023.1.0-h6a75c08_48682.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/mpmath-1.3.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/msys2-conda-epoch-20160418-1.tar.bz2
@@ -75,7 +75,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/xz-5.2.6-h8d14728_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/win-64/yaml-0.2.5-h8ffe710_2.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/zipp-3.20.2-pyhd8ed1ab_0.conda
-      - pypi: https://files.pythonhosted.org/packages/49/6f/07dab31ca496feda35cf3455b9e9380c43b5c685bb54ad890831c790da38/pygaljs-1.0.2-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/5b/c8/34bcdc9dd717cd7f35738dbc95dbcb792464f8da1ddd29a481153c430f68/ssqueezepy-0.6.5-py3-none-any.whl
   gpu:
     channels:
@@ -149,7 +148,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/m2w64-gcc-libs-core-5.3.0-7.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/win-64/m2w64-gmp-6.1.0-2.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/win-64/m2w64-libwinpthread-git-5.0.0.4634.697f757-2.tar.bz2
-      - conda: https://conda.anaconda.org/conda-forge/win-64/markupsafe-2.1.5-py310ha8f682b_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/win-64/markupsafe-3.0.0-py310ha8f682b_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/mkl-2023.1.0-h6a75c08_48682.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/mpmath-1.3.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/msys2-conda-epoch-20160418-1.tar.bz2
@@ -186,7 +185,6 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/xz-5.2.6-h8d14728_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/win-64/yaml-0.2.5-h8ffe710_2.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/zipp-3.20.2-pyhd8ed1ab_0.conda
-      - pypi: https://files.pythonhosted.org/packages/49/6f/07dab31ca496feda35cf3455b9e9380c43b5c685bb54ad890831c790da38/pygaljs-1.0.2-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/5b/c8/34bcdc9dd717cd7f35738dbc95dbcb792464f8da1ddd29a481153c430f68/ssqueezepy-0.6.5-py3-none-any.whl
 packages:
 - kind: conda
@@ -1149,13 +1147,12 @@ packages:
   timestamp: 1608166099896
 - kind: conda
   name: markupsafe
-  version: 2.1.5
-  build: py310ha8f682b_1
-  build_number: 1
+  version: 3.0.0
+  build: py310ha8f682b_0
   subdir: win-64
-  url: https://conda.anaconda.org/conda-forge/win-64/markupsafe-2.1.5-py310ha8f682b_1.conda
-  sha256: b717edee32f07be71aa7bbd8f429b77d5db760abe6332b78b5dacd7616913ad6
-  md5: 11f86944e249ec821eebd0e612284d80
+  url: https://conda.anaconda.org/conda-forge/win-64/markupsafe-3.0.0-py310ha8f682b_0.conda
+  sha256: 8c61c89ad6589ac81e9337626f7e7173552148ec090aed18481dab28a886c56a
+  md5: 38987cb08dc4d8afdb543d94f432b113
   depends:
   - python >=3.10,<3.11.0a0
   - python_abi 3.10.* *_cp310
@@ -1168,8 +1165,8 @@ packages:
   license_family: BSD
   purls:
   - pkg:pypi/markupsafe?source=hash-mapping
-  size: 26730
-  timestamp: 1724959968228
+  size: 25799
+  timestamp: 1728359891571
 - kind: conda
   name: mkl
   version: 2023.1.0
@@ -1440,11 +1437,6 @@ packages:
   - pkg:pypi/pygal?source=hash-mapping
   size: 81371
   timestamp: 1723565697203
-- kind: pypi
-  name: pygaljs
-  version: 1.0.2
-  url: https://files.pythonhosted.org/packages/49/6f/07dab31ca496feda35cf3455b9e9380c43b5c685bb54ad890831c790da38/pygaljs-1.0.2-py2.py3-none-any.whl
-  sha256: d75e18cb21cc2cda40c45c3ee690771e5e3d4652bf57206f20137cf475c0dbe8
 - kind: conda
   name: pytest
   version: 8.3.3
