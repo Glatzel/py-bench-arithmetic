@@ -16,7 +16,6 @@ scipy = "*"
 numexpr = "*"
 
 [pypi-dependencies]
-pygaljs = "*"
 ssqueezepy = "*"
 
 [feature.cpu.dependencies]
