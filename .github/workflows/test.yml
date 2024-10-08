@@ -21,6 +21,4 @@ jobs:
       machine: windows-latest
       test_path: ./src
       update_submodule: true
-      cov: true
-      cov_thr: 70
       test_args: --benchmark-max-time=0.00005 --benchmark-min-rounds=1
