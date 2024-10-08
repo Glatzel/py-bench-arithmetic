@@ -13,17 +13,13 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  bench: 
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Update Submodule
-        run: git submodule update --init --recursive
-      - name: Set up pixi
-        uses: prefix-dev/setup-pixi@v0.8.1
-        with:
-          run-install: false
-      - name: install environment
-        run: pixi install
-      - name: bench
-        run: pixi run pytest "./src" --benchmark-max-time=0.00005 --benchmark-min-rounds=1
+  test:
+    uses: Glatzel/py-template/.github/workflows/pytest.yml@main
+    with: 
+      name: test
+      machine: windows-latest
+      test_path: ./src
+      update_submodule: true
+      cov: true
+      cov_thr: 70
+      test_args: --benchmark-max-time=0.00005 --benchmark-min-rounds=1
