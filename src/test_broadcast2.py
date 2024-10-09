@@ -9,7 +9,7 @@ def data_figures():
     if os.getenv("CI"):
         return [0]
     else:  # pragma: nocover
-        return range(0, 9)
+        return range(9)
 
 
 @pytest.fixture(params=data_figures(), scope="module")
