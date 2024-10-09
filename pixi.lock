@@ -13,6 +13,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/bzip2-1.0.8-h2466b09_7.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/ca-certificates-2024.8.30-h56e8100_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/colorama-0.4.6-pyhd8ed1ab_0.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/win-64/coverage-7.6.1-py310ha8f682b_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/exceptiongroup-1.2.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/fftw-3.3.10-nompi_h89e6982_110.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/filelock-3.16.1-pyhd8ed1ab_0.conda
@@ -56,6 +57,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/pygal-3.0.5-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pytest-8.3.3-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pytest-benchmark-4.0.0-pyhd8ed1ab_0.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/noarch/pytest-cov-5.0.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/python-3.10.15-hfaddaf0_1_cpython.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/python_abi-3.10-5_cp310.conda
       - conda: https://conda.anaconda.org/pytorch/win-64/pytorch-2.4.1-py3.10_cpu_0.tar.bz2
@@ -65,6 +67,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/sympy-1.13.3-pyh04b8f61_3.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/tbb-2021.13.0-hc790b64_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/tk-8.6.13-h5226925_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/toml-0.10.2-pyhd8ed1ab_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/tomli-2.0.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/typing_extensions-4.12.2-pyha770c72_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/tzdata-2024b-hc8b5060_0.conda
@@ -89,6 +92,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/bzip2-1.0.8-h2466b09_7.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/ca-certificates-2024.8.30-h56e8100_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/colorama-0.4.6-pyhd8ed1ab_0.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/win-64/coverage-7.6.1-py310ha8f682b_1.conda
       - conda: https://conda.anaconda.org/nvidia/win-64/cuda-cccl-12.6.77-0.conda
       - conda: https://conda.anaconda.org/nvidia/noarch/cuda-cccl_win-64-12.6.77-0.conda
       - conda: https://conda.anaconda.org/nvidia/win-64/cuda-cudart-12.4.127-0.tar.bz2
@@ -165,6 +169,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/pygal-3.0.5-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pytest-8.3.3-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pytest-benchmark-4.0.0-pyhd8ed1ab_0.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/noarch/pytest-cov-5.0.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/python-3.10.15-hfaddaf0_1_cpython.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/python_abi-3.10-5_cp310.conda
       - conda: https://conda.anaconda.org/pytorch/win-64/pytorch-2.4.1-py3.10_cuda12.4_cudnn9_0.tar.bz2
@@ -175,6 +180,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/sympy-1.13.3-pyh04b8f61_3.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/tbb-2021.13.0-hc790b64_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/tk-8.6.13-h5226925_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/toml-0.10.2-pyhd8ed1ab_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/tomli-2.0.2-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/typing_extensions-4.12.2-pyha770c72_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/tzdata-2024b-hc8b5060_0.conda
@@ -251,6 +257,28 @@ packages:
   - pkg:pypi/colorama?source=hash-mapping
   size: 25170
   timestamp: 1666700778190
+- kind: conda
+  name: coverage
+  version: 7.6.1
+  build: py310ha8f682b_1
+  build_number: 1
+  subdir: win-64
+  url: https://conda.anaconda.org/conda-forge/win-64/coverage-7.6.1-py310ha8f682b_1.conda
+  sha256: 16d6738b61a634b77925ee6b953948d80fd4ac1af729e436af5664cf411c7e1b
+  md5: e87ecda9659a298689da511174ca7194
+  depends:
+  - python >=3.10,<3.11.0a0
+  - python_abi 3.10.* *_cp310
+  - tomli
+  - ucrt >=10.0.20348.0
+  - vc >=14.2,<15
+  - vc14_runtime >=14.29.30139
+  license: Apache-2.0
+  license_family: APACHE
+  purls:
+  - pkg:pypi/coverage?source=hash-mapping
+  size: 319752
+  timestamp: 1724954239230
 - kind: conda
   name: cuda-cccl
   version: 12.6.77
@@ -1482,6 +1510,26 @@ packages:
   size: 39571
   timestamp: 1666782598879
 - kind: conda
+  name: pytest-cov
+  version: 5.0.0
+  build: pyhd8ed1ab_0
+  subdir: noarch
+  noarch: python
+  url: https://conda.anaconda.org/conda-forge/noarch/pytest-cov-5.0.0-pyhd8ed1ab_0.conda
+  sha256: 218306243faf3c36347131c2b36bb189daa948ac2e92c7ab52bb26cc8c157b3c
+  md5: c54c0107057d67ddf077751339ec2c63
+  depends:
+  - coverage >=5.2.1
+  - pytest >=4.6
+  - python >=3.8
+  - toml
+  license: MIT
+  license_family: MIT
+  purls:
+  - pkg:pypi/pytest-cov?source=hash-mapping
+  size: 25507
+  timestamp: 1711411153367
+- kind: conda
   name: python
   version: 3.10.15
   build: hfaddaf0_1_cpython
@@ -1757,6 +1805,23 @@ packages:
   purls: []
   size: 3503410
   timestamp: 1699202577803
+- kind: conda
+  name: toml
+  version: 0.10.2
+  build: pyhd8ed1ab_0
+  subdir: noarch
+  noarch: python
+  url: https://conda.anaconda.org/conda-forge/noarch/toml-0.10.2-pyhd8ed1ab_0.tar.bz2
+  sha256: f0f3d697349d6580e4c2f35ba9ce05c65dc34f9f049e85e45da03800b46139c1
+  md5: f832c45a477c78bebd107098db465095
+  depends:
+  - python >=2.7
+  license: MIT
+  license_family: MIT
+  purls:
+  - pkg:pypi/toml?source=hash-mapping
+  size: 18433
+  timestamp: 1604308660817
 - kind: conda
   name: tomli
   version: 2.0.2

@@ -7,13 +7,14 @@ authors = ["Glatzel <893016099@qq.com>"]
 [dependencies]
 python = "*"
 numba = ">=0.60.0"
+numexpr = "*"
 numpy = "1.26.*"
 pyfftw = "*"
 pygal = "*"
 pytest = "*"
 pytest-benchmark = "*"
+pytest-cov="*"
 scipy = "*"
-numexpr = "*"
 
 [pypi-dependencies]
 ssqueezepy = "*"
