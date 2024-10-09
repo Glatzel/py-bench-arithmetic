@@ -9,7 +9,8 @@ group = "datum compense loop "
 def data_figures():
     if os.getenv("CI"):
         return [0]
-    return range(0, 6)
+    else:  # pragma: nocover
+        return range(0, 6)
 
 
 @pytest.fixture(params=data_figures(), scope="module")
