@@ -44,7 +44,7 @@ def test_numba_numpy(benchmark, sample_coords):
     numba = pytest.importorskip("numba")
 
     @numba.njit()
-    def vector(x, y, h, r=6378_137.0, x0=0.0, y0=500000.0):
+    def vector(x, y, h, r=6378_137.0, x0=0.0, y0=500000.0):  # pragma: nocover
         q = h / r
         factor = q / (1 + q)
         x = x - factor * (x - x0)
