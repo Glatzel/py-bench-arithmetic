@@ -13,6 +13,10 @@ permissions:
   actions: read
   checks: write
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     uses: Glatzel/py-template/.github/workflows/pytest.yml@main

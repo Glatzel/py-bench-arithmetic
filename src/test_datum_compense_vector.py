@@ -27,7 +27,7 @@ def test_numba(benchmark, sample_coords):
     numba = pytest.importorskip("numba")
 
     @numba.njit()
-    def vector(x, y, h, r=6378_137.0, x0=0.0, y0=500000.0):
+    def vector(x, y, h, r=6378_137.0, x0=0.0, y0=500000.0):  # pragma: nocover
         q = h / r
         factor = q / (1 + q)
         for i in range(x.shape[0]):
@@ -44,7 +44,7 @@ def test_numba_numpy(benchmark, sample_coords):
     numba = pytest.importorskip("numba")
 
     @numba.njit()
-    def vector(x, y, h, r=6378_137.0, x0=0.0, y0=500000.0):
+    def vector(x, y, h, r=6378_137.0, x0=0.0, y0=500000.0):  # pragma: nocover
         q = h / r
         factor = q / (1 + q)
         x = x - factor * (x - x0)
@@ -101,7 +101,7 @@ def test_torch(benchmark, sample_coords):
 
 
 @pytest.mark.skipif(torch.cuda.device_count() < 1, reason="No cuda device.")
-def test_torch_cuda(benchmark, sample_coords):
+def test_torch_cuda(benchmark, sample_coords):  # pragma: nocover
     from torch import rand as tcr
 
     def vector(x, y, h, r=6378_137.0, x0=0.0, y0=500000.0):
