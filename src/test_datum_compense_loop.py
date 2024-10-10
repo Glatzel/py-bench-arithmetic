@@ -38,7 +38,7 @@ def test_numba(benchmark, sample_coords):
     numba = pytest.importorskip("numba")
 
     @numba.njit()
-    def foo_numba(x1, y1, h1, r=6378_137.0, x0=0.0, y0=500000.0):
+    def foo_numba(x1, y1, h1, r=6378_137.0, x0=0.0, y0=500000.0):  # pragma: nocover
         q = h1 / r
         factor = q / (1 + q)
         x1 = x1 - factor * (x1 - y0)

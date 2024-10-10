@@ -101,7 +101,7 @@ def test_torch(benchmark, sample_coords):
 
 
 @pytest.mark.skipif(torch.cuda.device_count() < 1, reason="No cuda device.")
-def test_torch_cuda(benchmark, sample_coords):
+def test_torch_cuda(benchmark, sample_coords):  # pragma: nocover
     from torch import rand as tcr
 
     def vector(x, y, h, r=6378_137.0, x0=0.0, y0=500000.0):

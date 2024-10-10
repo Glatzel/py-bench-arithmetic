@@ -56,7 +56,7 @@ def test_torch2(benchmark, sample_data):
 
 
 @pytest.mark.skipif(torch.cuda.device_count() < 1, reason="No cuda device.")
-def test_torch_cuda2(benchmark, sample_data):
+def test_torch_cuda2(benchmark, sample_data):  # pragma: nocover
     def foo(x, y, z):
         z = torch.sin(x) ** 2 + torch.cos(y) ** 2  # noqa: F841
 
