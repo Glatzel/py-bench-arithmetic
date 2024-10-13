@@ -29,7 +29,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/libiconv-1.17-hcfcfb64_2.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/liblapack-3.9.0-5_hd5c7e75_netlib.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/win-64/libsqlite-3.46.1-h2466b09_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/win-64/libuv-1.49.0-h2466b09_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/win-64/libuv-1.49.1-h2466b09_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/libxml2-2.12.7-h0f24e4e_4.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/libxslt-1.1.39-h3df6e99_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/libzlib-1.3.1-h2466b09_2.conda
@@ -44,7 +44,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/mkl-2023.1.0-h6a75c08_48682.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/mpmath-1.3.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/msys2-conda-epoch-20160418-1.tar.bz2
-      - conda: https://conda.anaconda.org/conda-forge/noarch/networkx-3.3-pyhd8ed1ab_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/networkx-3.4.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/numba-0.60.0-py310h7793332_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/numexpr-2.7.3-py310hf5e1058_2.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/win-64/numpy-1.26.4-py310hf667824_0.conda
@@ -141,7 +141,7 @@ environments:
       - conda: https://conda.anaconda.org/nvidia/win-64/libnvjpeg-12.3.1.89-0.tar.bz2
       - conda: https://conda.anaconda.org/nvidia/win-64/libnvjpeg-dev-12.3.1.89-0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/win-64/libsqlite-3.46.1-h2466b09_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/win-64/libuv-1.49.0-h2466b09_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/win-64/libuv-1.49.1-h2466b09_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/libxml2-2.12.7-h0f24e4e_4.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/libxslt-1.1.39-h3df6e99_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/libzlib-1.3.1-h2466b09_2.conda
@@ -156,7 +156,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/win-64/mkl-2023.1.0-h6a75c08_48682.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/mpmath-1.3.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/msys2-conda-epoch-20160418-1.tar.bz2
-      - conda: https://conda.anaconda.org/conda-forge/noarch/networkx-3.3-pyhd8ed1ab_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/networkx-3.4.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/numba-0.60.0-py310h7793332_0.conda
       - conda: https://conda.anaconda.org/conda-forge/win-64/numexpr-2.7.3-py310hf5e1058_2.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/win-64/numpy-1.26.4-py310hf667824_0.conda
@@ -273,6 +273,7 @@ packages:
   - vc >=14.2,<15
   - vc14_runtime >=14.29.30139
   license: Apache-2.0
+  license_family: APACHE
   purls:
   - pkg:pypi/coverage?source=hash-mapping
   size: 318416
@@ -970,12 +971,12 @@ packages:
   timestamp: 1725354171439
 - kind: conda
   name: libuv
-  version: 1.49.0
+  version: 1.49.1
   build: h2466b09_0
   subdir: win-64
-  url: https://conda.anaconda.org/conda-forge/win-64/libuv-1.49.0-h2466b09_0.conda
-  sha256: 46a82585528405e74542ceaacbb225f26aca17c642de56b3708cdf1a27509bce
-  md5: 2ad068a43e2bda1f8ae109c8223a5fe7
+  url: https://conda.anaconda.org/conda-forge/win-64/libuv-1.49.1-h2466b09_0.conda
+  sha256: 2dbf9f337e980950eed7b3c63a7a8b838fc42c94a7b9315ae778b7afd3e756f1
+  md5: 1785e24e029e7f07c69d57f1de7eb14d
   depends:
   - ucrt >=10.0.20348.0
   - vc >=14.2,<15
@@ -983,8 +984,8 @@ packages:
   license: MIT
   license_family: MIT
   purls: []
-  size: 288899
-  timestamp: 1727283706163
+  size: 289993
+  timestamp: 1728653493597
 - kind: conda
   name: libxml2
   version: 2.12.7
@@ -1242,27 +1243,26 @@ packages:
   timestamp: 1608166968312
 - kind: conda
   name: networkx
-  version: '3.3'
-  build: pyhd8ed1ab_1
-  build_number: 1
+  version: 3.4.1
+  build: pyhd8ed1ab_0
   subdir: noarch
   noarch: python
-  url: https://conda.anaconda.org/conda-forge/noarch/networkx-3.3-pyhd8ed1ab_1.conda
-  sha256: cbd8a6de87ad842e7665df38dcec719873fe74698bc761de5431047b8fada41a
-  md5: d335fd5704b46f4efb89a6774e81aef0
+  url: https://conda.anaconda.org/conda-forge/noarch/networkx-3.4.1-pyhd8ed1ab_0.conda
+  sha256: f753c9a2be8ad02077f027f4e03d9531b305c5297d3708c410cf95b99195b335
+  md5: 4994669899eb2e84ab855edcb71efc58
   depends:
   - python >=3.10
   constrains:
-  - pandas >=1.4
-  - numpy >=1.22
-  - matplotlib >=3.5
-  - scipy >=1.9,!=1.11.0,!=1.11.1
+  - scipy >=1.10,!=1.11.0,!=1.11.1
+  - numpy >=1.24
+  - matplotlib >=3.7
+  - pandas >=2.0
   license: BSD-3-Clause
   license_family: BSD
   purls:
   - pkg:pypi/networkx?source=hash-mapping
-  size: 1185670
-  timestamp: 1712540499262
+  size: 1197665
+  timestamp: 1728721145589
 - kind: conda
   name: numba
   version: 0.60.0
