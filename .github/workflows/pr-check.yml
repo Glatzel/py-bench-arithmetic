@@ -32,7 +32,7 @@ jobs:
       test_args: --benchmark-max-time=0.00005 --benchmark-min-rounds=1
       cov: true
   check-result:
-    needs: [check-title,check-title-release]
+    needs: [check-title,ruff-lint,test]
     runs-on: ubuntu-latest
     steps:
         - run: echo "All success."
