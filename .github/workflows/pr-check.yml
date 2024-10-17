@@ -1,8 +1,6 @@
 name: Pull Requests Check
 
 on:
-  push:
-    branches: main
   pull_request:
     types:
       - opened
@@ -39,14 +37,8 @@ jobs:
       test_args: --benchmark-max-time=0.00005 --benchmark-min-rounds=1 --benchmark-histogram=histogram/arithmetic
       cov: true
 
-  check-result-pr:
+  check-result:
     needs: [check-title,ruff-lint,test]
-    runs-on: ubuntu-latest
-    steps:
-        - run: echo "All success."
-
-  check-result-push:
-    needs: [ruff-lint,test]
     runs-on: ubuntu-latest
     steps:
         - run: echo "All success."
