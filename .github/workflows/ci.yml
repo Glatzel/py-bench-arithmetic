@@ -45,9 +45,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - run: echo "All success."
-  check-result-push:
-    if: ${{ github.event_name == 'push' }}
-    needs: [ruff-lint,test]
-    runs-on: ubuntu-latest
-    steps:
-        - run: echo "All success."
