@@ -4,7 +4,7 @@ import numpy as np
 import pytest
 import torch
 
-rng = np.random.default_rng(1337
+rng = np.random.default_rng(1337 
 npr = rng.random
 group = "datum compense vector"
 
