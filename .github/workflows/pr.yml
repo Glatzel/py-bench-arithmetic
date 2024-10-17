@@ -31,6 +31,6 @@ jobs:
       update_submodule: true
       test_args: --benchmark-max-time=0.00005 --benchmark-min-rounds=1
       cov: true
-  wait-for-all:
+  check-result:
     needs: [check-title,ruff-lint,test]
     uses: Glatzel/py-template/.github/workflows/result.yml@main
