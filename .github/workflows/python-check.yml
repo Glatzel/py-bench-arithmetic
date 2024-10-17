@@ -32,7 +32,6 @@ jobs:
       name: test
       machine: ${{matrix.os}}
       test_path: ./src
-      update_submodule: true
       test_args: --benchmark-max-time=0.00005 --benchmark-min-rounds=1 --benchmark-histogram=histogram/arithmetic
       cov: true
 
