@@ -33,4 +33,6 @@ jobs:
       cov: true
   check-result:
     needs: [check-title,ruff-lint,test]
-    uses: Glatzel/py-template/.github/workflows/result.yml@main
+    runs-on: ubuntu-latest
+    steps:
+        - run: echo "All success."
