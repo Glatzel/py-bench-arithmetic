@@ -3,21 +3,18 @@ name: CI
 on:
   push:
     branches: main
+    paths-ignore:
+      - "scripts/*"
+      - "*.md"
   pull_request:
     types:
       - opened
       - edited
       - synchronize
       - ready_for_review
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
-  
-permissions:
-  contents: read
-  actions: read
-  checks: write
+    paths-ignore:
+      - "scripts/*"
+      - "*.md"
 
 jobs:
   check-title:
@@ -27,7 +24,7 @@ jobs:
   ruff-lint:
     uses: Glatzel/py-template/.github/workflows/lint.yml@main
   
-  test:
+  pytest:
     uses: Glatzel/py-template/.github/workflows/pytest.yml@main
     strategy:
       matrix:
@@ -38,10 +35,3 @@ jobs:
       test_path: ./src
       test_args: --benchmark-max-time=0.00005 --benchmark-min-rounds=1 --benchmark-histogram=histogram/arithmetic
       cov: true
-
-  check-result-pr:
-    if: ${{ github.event_name == 'pull_request' }}
-    needs: [check-title,ruff-lint,test]
-    runs-on: ubuntu-latest
-    steps:
-        - run: echo "All success."
