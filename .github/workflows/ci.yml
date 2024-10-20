@@ -22,10 +22,6 @@ permissions:
   checks: write
   
 jobs:
-  check-title:
-    if: ${{ github.event_name == 'pull_request' }}
-    uses: Glatzel/py-template/.github/workflows/lint-pr.yml@main
-
   ruff-lint:
     uses: Glatzel/py-template/.github/workflows/lint.yml@main
   
