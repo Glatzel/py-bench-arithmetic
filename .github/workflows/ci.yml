@@ -15,7 +15,12 @@ on:
     paths-ignore:
       - "scripts/*"
       - "*.md"
-
+  
+permissions:
+  contents: read
+  actions: read
+  checks: write
+  
 jobs:
   check-title:
     if: ${{ github.event_name == 'pull_request' }}
