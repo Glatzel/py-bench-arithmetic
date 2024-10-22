@@ -30,7 +30,8 @@ jobs:
       - uses: prefix-dev/setup-pixi@v0.8.1
         with:
           cache: true
-          cache-write: ${{ github.event_name == 'push'}}
+          cache-write: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
+   
   ruff-lint:
     uses: Glatzel/py-template/.github/workflows/lint.yml@main
   
